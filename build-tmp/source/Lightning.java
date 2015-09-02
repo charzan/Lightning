@@ -23,19 +23,36 @@ public void setup()
 {
 	size(300,300);
 	background(0, 0, 255);
-	strokeWeight(10);
+	strokeWeight(3);
 }
+
 public void draw()
 { 
-	stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
-	while(endX <= 300){
-		endX = startX + ((int)(Math.random() * 9));
-		endY = startY + ((int)(Math.random() * 18 )) - 9;
+	lightning();	
+}
+
+public void lightning()
+{
+		stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+	//stroke(250, 0, 0);
+	if(endX < 300){
+		endX = startX + (int)(Math.random() * 9);
+		endY = startY + (int)(Math.random() * 18) - 9;
+
 		line(startX, startY, endX, endY);
+
+		startX = endX;
+		startY = endY;
+
 	}
 }
 public void mousePressed()
 {
+	
+	 startX = 0;
+     startY = 150;
+     endX = 0;
+     endY = 150;
 
 }
 
