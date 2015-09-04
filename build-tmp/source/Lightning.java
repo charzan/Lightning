@@ -27,11 +27,13 @@ public void setup()
 	background(15, 41, 102);
 	strokeWeight(1);
 	frameRate(200);
+	character();
 }
 
 public void draw()
 { 
-	lightning();	
+	lightning();
+	//character();	
 }
 
 public void lightning()
@@ -45,17 +47,20 @@ public void lightning()
 		endY = startY + (int)(Math.random() * 9) ;
 		line(startX, startY, endX, endY);
 
-		if (fade >= 0 && endY >= 300)
-		{
-			fade -= 50;
 
-		}
 
 		startX = endX;
 		startY = endY;
 
 	}
 }
+
+public void character()
+{
+	fill(0, 255, 0);
+	ellipse(mouseX, 250, 50, 50);
+}
+
 public void mousePressed()
 {
 	
