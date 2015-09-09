@@ -7,7 +7,7 @@ int fade = (int)(Math.random()*255);
 
 void setup()
 {
-	size(300,300);
+	size(500,500);
 	background(15, 41, 102);
 	strokeWeight(1);
 	frameRate(200);
@@ -16,7 +16,7 @@ void setup()
 void draw()
 { 
 	lightning();
-	character();	
+		
 }
 
 void lightning()
@@ -24,7 +24,7 @@ void lightning()
 	//stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 	//fade = (int)(Math.random()*800);
 	stroke(223, 216, 11, fade);
-	if(endY < 300)
+	if(endY < 500)
 	{
 		endX = startX + (int)(Math.random() * 18)-9;
 		endY = startY + (int)(Math.random() * 9) ;

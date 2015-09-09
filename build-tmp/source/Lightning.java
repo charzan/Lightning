@@ -23,17 +23,16 @@ int fade = (int)(Math.random()*255);
 
 public void setup()
 {
-	size(300,300);
+	
 	background(15, 41, 102);
 	strokeWeight(1);
 	frameRate(200);
-	character();
 }
 
 public void draw()
 { 
 	lightning();
-	//character();	
+		
 }
 
 public void lightning()
@@ -41,24 +40,16 @@ public void lightning()
 	//stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 	//fade = (int)(Math.random()*800);
 	stroke(223, 216, 11, fade);
-	if(endY < 300)
+	if(endY < 500)
 	{
 		endX = startX + (int)(Math.random() * 18)-9;
 		endY = startY + (int)(Math.random() * 9) ;
 		line(startX, startY, endX, endY);
 
-
-
 		startX = endX;
 		startY = endY;
 
 	}
-}
-
-public void character()
-{
-	fill(0, 255, 0);
-	ellipse(mouseX, 250, 50, 50);
 }
 
 public void mousePressed()
@@ -80,6 +71,7 @@ void mousePressed() needs to set startX,startY,endX,endY back to their original 
 You will need to modify index.html to customize your website with it's own title, header and footer. When you are happy with your program, push your finished project up to GitHub
 The final step is to submit the URL for your website via the "drop box" for the assignment on School Loop. Don't hesitate to ask for help if your aren't sure how something is suppose to work.
 */
+  public void settings() { 	size(500,500); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Lightning" };
     if (passedArgs != null) {
